@@ -5,11 +5,12 @@ import java.util.HashMap;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
+
 /**
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem1174 {
+public class Problem1174YES {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -59,7 +60,6 @@ public class Problem1174 {
         }
     }
 }
-
 class Route implements Comparable<Route> {
 
     String city1, city2;

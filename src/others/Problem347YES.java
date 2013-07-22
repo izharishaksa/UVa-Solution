@@ -3,13 +3,14 @@ package others;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem347 {
+public class Problem347YES {
 
     static boolean cek(int n) {
         int[] temp = new int[(n + "").length()];
@@ -56,18 +57,25 @@ public class Problem347 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner sc = new Scanner(System.in);
         int ind = 1;
-        String s = "";
+        String s;
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for (int i = 1; i <= 9999999; i++) {
+            if (valid(i)) {
+                if (cek(i)) {
+                    list.add(i);
+                }
+            }
+        }
+
         while ((s = br.readLine()) != null) {
             int n = Integer.parseInt(s);
             if (n == 0) {
                 break;
             }
-            for (int i = n; i <= 9999999; i++) {
-                if (valid(i)) {
-                    if (cek(i)) {
-                        System.out.println("Case " + (ind++) + ": " + i);
-                        break;
-                    }
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i) > n) {
+                    System.out.println("Case " + (ind++) + ": " + list.get(i));
+                    break;
                 }
             }
         }

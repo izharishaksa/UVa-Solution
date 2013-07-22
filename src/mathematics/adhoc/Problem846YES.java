@@ -6,28 +6,27 @@ import java.util.Scanner;
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem846 {
+public class Problem846YES {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i = 0; i < n; i++) {
+        int T = sc.nextInt();
+        for (int t = 0; t < T; t++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
-            if (a == b) {
-                System.out.println(0);
-            } else if (b - a == 1) {
-                System.out.println(1);                
+            int diff = b - a;
+            int sq = (int) Math.sqrt(diff);
+            int result;
+            if (diff == 0) {
+                result = 0;
+            } else if (sq * sq == diff) {
+                result = sq * 2 - 1;
+            } else if (sq * sq + sq < diff) {
+                result = sq * 2 + 1;
             } else {
-                int total = 2;
-                a++;
-                b--;
-                int len = b - a;
-                total += Math.floor(Math.sqrt(len));
-                total += len % 2;
-                System.out.println(total);
+                result = sq * 2;
             }
+            System.out.println(result);
         }
     }
-    
 }
