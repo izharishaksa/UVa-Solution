@@ -4,7 +4,8 @@ import java.util.*;
 import java.util.ArrayList;
 
 /**
- *
+ * Contest Scoreboard.
+ * 
  * @author Izhari Ishak Aksa
  */
 public class Problem10258YES {

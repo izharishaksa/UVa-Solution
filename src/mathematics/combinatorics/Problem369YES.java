@@ -3,6 +3,7 @@ package mathematics.combinatorics;
 import java.util.*;
 
 /**
+ * Combinations.
  *
  * @author Izhari Ishak Aksa
  */

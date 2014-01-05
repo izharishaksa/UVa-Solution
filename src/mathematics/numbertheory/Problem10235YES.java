@@ -3,10 +3,11 @@ package mathematics.numbertheory;
 import java.util.*;
 
 /**
+ * Simply Emirp.
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem10235 {
+public class Problem10235YES {
 
     static boolean isPrime(int n) {
         if (n < 2) return false;

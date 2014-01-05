@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
+ * Encoder and Decoder.
  *
  * @author Izhari Ishak Aksa
  */

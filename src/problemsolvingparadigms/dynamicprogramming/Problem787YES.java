@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
+ * Maximum Sub-sequence Product.
  *
  * @author Izhari Ishak Aksa
  */

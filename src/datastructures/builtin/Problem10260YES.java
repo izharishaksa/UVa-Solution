@@ -3,7 +3,8 @@ package datastructures.builtin;
 import java.util.Scanner;
 
 /**
- *
+ * Soundex.
+ * 
  * @author Izhari Ishak Aksa
  */
 public class Problem10260YES {

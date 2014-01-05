@@ -3,6 +3,7 @@ package mathematics.adhoc;
 import java.util.Scanner;
 
 /**
+ * Self Numbers.
  *
  * @author Izhari Ishak Aksa
  */

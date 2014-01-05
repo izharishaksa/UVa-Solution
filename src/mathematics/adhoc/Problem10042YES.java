@@ -3,6 +3,7 @@ package mathematics.adhoc;
 import java.util.Scanner;
 
 /**
+ * Smith Numbers.
  *
  * @author Izhari Ishak Aksa
  */

@@ -3,6 +3,7 @@ package datastructures.builtin;
 import java.util.Scanner;
 
 /**
+ * Box of Bricks.
  *
  * @author Izhari Ishak Aksa
  */

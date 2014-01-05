@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
+ * Machined Surfaces.
  *
  * @author Izhari Ishak Aksa
  */

@@ -4,6 +4,7 @@ import java.util.*;
 import java.math.*;
 
 /**
+ * Very Easy!!!
  *
  * @author Izhari Ishak Aksa
  */

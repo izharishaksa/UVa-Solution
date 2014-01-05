@@ -3,6 +3,7 @@ package problemsolvingparadigms.completesearch;
 import java.util.Scanner;
 
 /**
+ * Ecological Bin Packing.
  *
  * @author Izhari Ishak Aksa
  */
@@ -49,9 +50,8 @@ public class Problem102YES {
             if (cur < min) {
                 min = cur;
                 ret = "GCB";
-            }            
+            }
             System.out.println(ret + " " + min);
         }
     }
-    
 }

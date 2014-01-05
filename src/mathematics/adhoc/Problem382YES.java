@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Perfection.
  *
  * @author Izhari Ishak Aksa
  */

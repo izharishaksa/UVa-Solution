@@ -3,6 +3,7 @@ package mathematics.adhoc;
 import java.util.Scanner;
 
 /**
+ * Steps.
  *
  * @author Izhari Ishak Aksa
  */

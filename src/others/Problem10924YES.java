@@ -3,14 +3,18 @@ package others;
 import java.util.*;
 
 /**
+ * Prime Words.
  *
  * @author Izhari Ishak Aksa
  */
 public class Problem10924YES {
 
     static boolean isPrime(int n) {
-        for (int i = 2; i * i <= n; i++)
-            if (n % i == 0) return false;
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
         return true;
     }
 
@@ -20,7 +24,9 @@ public class Problem10924YES {
         Arrays.fill(prime, false);
         prime[1] = true;
         for (int i = 2; i < 10000; i++) {
-            if (isPrime(i)) prime[i] = true;
+            if (isPrime(i)) {
+                prime[i] = true;
+            }
         }
         String s = "";
         while (sc.hasNext()) {
@@ -41,5 +47,4 @@ public class Problem10924YES {
             }
         }
     }
-
 }

@@ -3,6 +3,7 @@ package introduction;
 import java.util.*;
 
 /**
+ * Blowing Fuses.
  *
  * @author Izhari Ishak Aksa
  */

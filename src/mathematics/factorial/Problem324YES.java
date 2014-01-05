@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
+ * Factorial Frequencies.
  *
  * @author Izhari Ishak Aksa
  */

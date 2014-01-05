@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Sum of Consecutive Prime Numbers.
  *
  * @author Izhari Ishak Aksa
  */

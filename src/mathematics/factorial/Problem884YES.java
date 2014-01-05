@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * Factorial Factors.
  *
  * @author Izhari Ishak Aksa
  */
@@ -30,5 +31,4 @@ public class Problem884YES {
             System.out.println(factor[n]);
         }
     }
-
 }

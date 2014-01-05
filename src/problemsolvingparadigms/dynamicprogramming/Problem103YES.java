@@ -1,7 +1,10 @@
 package problemsolvingparadigms.dynamicprogramming;
 
 import java.util.*;
+
 /**
+ * Stacking Boxes.
+ * 
  * This problem is solved using DP (LIS)
  *
  * @author Izhari Ishak Aksa
@@ -64,7 +67,6 @@ public class Problem103YES {
             System.out.println(temp[ans - 1]);
         }
     }
-
 }
 
 class Box implements Comparable<Box> {
@@ -79,10 +81,13 @@ class Box implements Comparable<Box> {
 
     public int compareTo(Box o) {
         for (int i = 0; i < arr.length; i++) {
-            if (o.arr[i] < this.arr[i]) return 1;
-            if (o.arr[i] > this.arr[i]) return -1;
+            if (o.arr[i] < this.arr[i]) {
+                return 1;
+            }
+            if (o.arr[i] > this.arr[i]) {
+                return -1;
+            }
         }
         return 1;
     }
-
 }

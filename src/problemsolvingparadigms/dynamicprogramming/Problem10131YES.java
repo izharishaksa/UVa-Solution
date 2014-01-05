@@ -1,7 +1,10 @@
 package problemsolvingparadigms.dynamicprogramming;
 
 import java.util.*;
+
 /**
+ * Is Bigger Smarter?
+ * 
  * This problem is solved using DP (longest decreasing sequence).
  *
  * @author Izhari Ishak Aksa
@@ -52,7 +55,6 @@ public class Problem10131YES {
             System.out.println(temp[i]);
         }
     }
-
 }
 
 class Elephant implements Comparable<Elephant> {
@@ -68,9 +70,12 @@ class Elephant implements Comparable<Elephant> {
     }
 
     public int compareTo(Elephant o) {
-        if (o.weight > this.weight) return -1;
-        else if (o.weight == this.weight) {
-            if (o.iq > this.iq) return 1;
+        if (o.weight > this.weight) {
+            return -1;
+        } else if (o.weight == this.weight) {
+            if (o.iq > this.iq) {
+                return 1;
+            }
             return -1;
         }
         return 1;

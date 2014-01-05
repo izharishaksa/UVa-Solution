@@ -1,12 +1,11 @@
 package mathematics.numbertheory;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Set;
 
 /**
+ * Perfect P-th Powers.
  *
  * @author Izhari Ishak Aksa
  */
@@ -33,7 +32,7 @@ public class Problem10622YES {
                 break;
             }
             long i = 2;
-            Hashtable<Long, Long> hi = new Hashtable<Long, Long>();
+            HashMap<Long, Long> hi = new HashMap<Long, Long>();
             do {
                 if (n % i == 0) {
                     if (hi.containsKey(i)) {

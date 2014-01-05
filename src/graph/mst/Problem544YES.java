@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
+ * Heavy Cargo.
  *
  * @author Izhari Ishak Aksa
  */

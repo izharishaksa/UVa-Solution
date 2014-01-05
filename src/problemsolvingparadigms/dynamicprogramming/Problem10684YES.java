@@ -3,6 +3,7 @@ package problemsolvingparadigms.dynamicprogramming;
 import java.util.Scanner;
 
 /**
+ * The Jackpot.
  *
  * @author Izhari Ishak Aksa
  */
@@ -14,8 +15,8 @@ public class Problem10684YES {
             int n = sc.nextInt();
             if (n == 0) {
                 break;
-            }            
-            int max = 0, maxN = 0;            
+            }
+            int max = 0, maxN = 0;
             for (int i = 0; i < n; i++) {
                 maxN = Math.max(0, maxN + sc.nextInt());
                 max = Math.max(max, maxN);
@@ -27,5 +28,4 @@ public class Problem10684YES {
             }
         }
     }
-    
 }

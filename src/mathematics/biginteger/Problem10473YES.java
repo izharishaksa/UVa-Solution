@@ -1,7 +1,9 @@
 package mathematics.biginteger;
 
 import java.io.*;
+
 /**
+ * Simple Base Conversion.
  *
  * @author Izhari Ishak Aksa
  */
@@ -11,7 +13,9 @@ public class Problem10473YES {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = "";
         while ((s = br.readLine()) != null) {
-            if (s.charAt(0) == '-') break;
+            if (s.charAt(0) == '-') {
+                break;
+            }
             if (s.indexOf("x") >= 0) {
                 System.out.println(Integer.parseInt(s.substring(2), 16));
             } else {
@@ -19,5 +23,4 @@ public class Problem10473YES {
             }
         }
     }
-
 }

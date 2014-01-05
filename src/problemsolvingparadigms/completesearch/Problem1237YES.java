@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
+ * Expert Enough?
  *
  * @author Izhari Ishak Aksa
  */
@@ -21,7 +22,7 @@ public class Problem1237YES {
                 String[] temp = br.readLine().split(" ");
                 name[i] = temp[0];
                 lowest[i] = Integer.parseInt(temp[1]);
-                highest[i] = Integer.parseInt(temp[2]);                
+                highest[i] = Integer.parseInt(temp[2]);
             }
             int Q = Integer.parseInt(br.readLine().trim());
             for (int i = 0; i < Q; i++) {

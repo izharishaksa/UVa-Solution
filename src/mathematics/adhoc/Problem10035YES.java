@@ -3,6 +3,7 @@ package mathematics.adhoc;
 import java.util.*;
 
 /**
+ * Primary Arithmetic.
  *
  * @author Izhari Ishak Aksa
  */

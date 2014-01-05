@@ -3,6 +3,7 @@ package mathematics.primenumber;
 import java.util.*;
 
 /**
+ * Prime Frequency.
  *
  * @author Izhari Ishak Aksa
  */
@@ -45,10 +46,9 @@ public class Problem10789YES {
             }
             if (ret.compareTo("") == 0) {
                 System.out.println("Case " + t + ": empty");
-            } else{
+            } else {
                 System.out.println("Case " + t + ": " + ret);
             }
         }
     }
-
 }

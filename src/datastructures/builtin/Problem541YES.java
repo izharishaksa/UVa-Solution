@@ -3,6 +3,7 @@ package datastructures.builtin;
 import java.util.Scanner;
 
 /**
+ * Error Correction.
  *
  * @author Izhari Ishak Aksa
  */

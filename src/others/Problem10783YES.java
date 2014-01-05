@@ -3,6 +3,7 @@ package others;
 import java.util.*;
 
 /**
+ * Odd Sum.
  *
  * @author Izhari Ishak Aksa
  */
@@ -16,10 +17,11 @@ public class Problem10783YES {
             int b = sc.nextInt();
             int total = 0;
             for (int i = a; i <= b; i++) {
-                if (i % 2 == 1) total += i;
+                if (i % 2 == 1) {
+                    total += i;
+                }
             }
             System.out.println("Case " + t + ": " + total);
         }
     }
-
 }

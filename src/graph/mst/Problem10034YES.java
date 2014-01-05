@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 
 /**
+ * Freckles.
  *
  * @author Izhari Ishak Aksa
  */

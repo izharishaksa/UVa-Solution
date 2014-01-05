@@ -4,10 +4,11 @@ import java.io.*;
 import java.util.*;
 
 /**
+ * Prime Factors.
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem583 {
+public class Problem583YES {
 
     static boolean isPrime(int n) {
         for (int i = 2; i * i <= n; i++) {
@@ -26,12 +27,13 @@ public class Problem583 {
         for (int i = 2; i <= 46341; i++) {
             if (benar[i]) {
                 list.add(i);
-                for (int j = i + i; j <= 46341; j += i)
+                for (int j = i + i; j <= 46341; j += i) {
                     benar[j] = false;
+                }
             }
         }
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));        
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
         String s;
         while ((s = br.readLine()) != null) {
             int n = Integer.parseInt(s);
@@ -64,10 +66,11 @@ public class Problem583 {
                 }
             }
             if (n > 1) {
-                if (factor.containsKey(n))
+                if (factor.containsKey(n)) {
                     factor.put(n, factor.get(n) + 1);
-                else
+                } else {
                     factor.put(n, 1);
+                }
             }
             Integer[] key = factor.keySet().toArray(new Integer[0]);
             pw.print(temp + " = ");

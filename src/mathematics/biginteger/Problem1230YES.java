@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
+ * MODEX.
  *
  * @author Izhari Ishak Aksa
  */
@@ -17,5 +18,4 @@ public class Problem1230YES {
                     .modPow(new BigInteger(sc.nextInt() + ""), new BigInteger(sc.nextInt() + "")));
         }
     }
-    
 }

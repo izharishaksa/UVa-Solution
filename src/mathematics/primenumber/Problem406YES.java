@@ -3,6 +3,7 @@ package mathematics.primenumber;
 import java.util.*;
 
 /**
+ * Prime Cuts.
  *
  * @author Izhari Ishak Aksa
  */

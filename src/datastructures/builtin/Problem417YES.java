@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
+ * Word Index.
  *
  * @author Izhari Ishak Aksa
  */

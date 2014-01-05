@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 
 /**
+ * Broken Keyboard (a.k.a Beiju Text).
  *
  * @author Izhari Ishak Aksa
  */

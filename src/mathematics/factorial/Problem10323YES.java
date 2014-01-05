@@ -3,6 +3,7 @@ package mathematics.factorial;
 import java.util.*;
 
 /**
+ * Factorial! You Must Be Kidding!!!
  *
  * @author Izhari Ishak Aksa
  */
@@ -31,5 +32,4 @@ public class Problem10323YES {
             }
         }
     }
-
 }

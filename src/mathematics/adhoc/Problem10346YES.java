@@ -3,6 +3,7 @@ package mathematics.adhoc;
 import java.util.*;
 
 /**
+ * Peter's Smokes.
  *
  * @author Izhari Ishak Aksa
  */

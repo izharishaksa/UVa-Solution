@@ -3,6 +3,7 @@ package mathematics.combinatorics;
 import java.util.*;
 
 /**
+ * Pizza Cutting.
  *
  * @author Izhari Ishak Aksa
  */
@@ -19,5 +20,4 @@ public class Problem10079YES {
             System.out.println(res);
         }
     }
-
 }

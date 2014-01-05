@@ -1,6 +1,7 @@
 package graph.dfs;
 
 /**
+ * Il Gioco dell'X.
  *
  * @author Izhari Ishak Aksa
  */

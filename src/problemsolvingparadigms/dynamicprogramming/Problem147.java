@@ -3,6 +3,7 @@ package problemsolvingparadigms.dynamicprogramming;
 import java.util.*;
 
 /**
+ * Dollars.
  *
  * @author Izhari Ishak Aksa
  */

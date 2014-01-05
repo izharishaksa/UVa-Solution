@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
+ * Basic Remains.
  *
  * @author Izhari Ishak Aksa
  */
@@ -19,9 +20,8 @@ public class Problem10551YES {
             String p = sc.next();
             String m = sc.next();
             BigInteger pp = new BigInteger(p, b);
-            BigInteger mm = new BigInteger(m, b);            
+            BigInteger mm = new BigInteger(m, b);
             System.out.println(pp.mod(mm).toString(b));
         }
     }
-    
 }

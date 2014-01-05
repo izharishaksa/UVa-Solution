@@ -3,6 +3,7 @@ package problemsolvingparadigms.completesearch;
 import java.util.*;
 
 /**
+ * Lotto.
  *
  * @author Izhari Ishak Aksa
  */
@@ -16,7 +17,9 @@ public class Problem441YES {
             if (N == 0) {
                 break;
             }
-            if (ind > 0) System.out.println();
+            if (ind > 0) {
+                System.out.println();
+            }
             int[] arr = new int[N];
             for (int i = 0; i < N; i++) {
                 arr[i] = sc.nextInt();

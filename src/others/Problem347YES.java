@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Run.
  *
  * @author Izhari Ishak Aksa
  */

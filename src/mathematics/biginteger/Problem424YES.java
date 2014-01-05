@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.*;
 
 /**
+ * Integer Inquiry.
  *
  * @author Izhari Ishak Aksa
  */
@@ -17,5 +18,4 @@ public class Problem424YES {
         }
         System.out.println(res);
     }
-
 }

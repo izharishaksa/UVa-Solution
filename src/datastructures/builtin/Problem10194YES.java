@@ -6,8 +6,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /**
+ * Football (aka Soccer).
+ *
  * This problem should be output by using encoded character.
- * 
+ *
  * @author Izhari Ishak Aksa
  */
 public class Problem10194YES {
@@ -82,12 +84,12 @@ public class Problem10194YES {
             for (int i = 0; i < con.length; i++) {
                 cout.println((i + 1) + ") " + con[i].name + " " + con[i].point + "p, " + con[i].play + "g (" + con[i].win + "-" + con[i].tie + "-" + con[i].lose + "), " + con[i].gd + "gd (" + con[i].gs + "-" + con[i].ga + ")");
             }
-            if (t < T - 1)
+            if (t < T - 1) {
                 cout.println();
+            }
         }
         cout.flush();
     }
-
 }
 
 class Contestant implements Comparable<Contestant> {
@@ -115,20 +117,26 @@ class Contestant implements Comparable<Contestant> {
     }
 
     public int compareTo(Contestant o) {
-        if (this.point > o.point) return -1;
-        else if (this.point == o.point) {
+        if (this.point > o.point) {
+            return -1;
+        } else if (this.point == o.point) {
             if (this.win > o.win) {
                 return -1;
             } else if (this.win == o.win) {
-                if (this.gd > o.gd) return -1;
-                else if (this.gd == o.gd) {
-                    if (this.gs > o.gs) return -1;
-                    else if (this.gs == o.gs) {
-                        if (this.play < o.play) return -1;
-                        else if (this.play == o.play) {
+                if (this.gd > o.gd) {
+                    return -1;
+                } else if (this.gd == o.gd) {
+                    if (this.gs > o.gs) {
+                        return -1;
+                    } else if (this.gs == o.gs) {
+                        if (this.play < o.play) {
+                            return -1;
+                        } else if (this.play == o.play) {
                             String a = this.name.toUpperCase();
                             String b = o.name.toUpperCase();
-                            if (a.compareTo(b) < 0) return -1;
+                            if (a.compareTo(b) < 0) {
+                                return -1;
+                            }
                         }
                     }
                 }
@@ -136,5 +144,4 @@ class Contestant implements Comparable<Contestant> {
         }
         return 1;
     }
-
 }

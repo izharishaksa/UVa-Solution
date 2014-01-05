@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
+ * 8 Queens Chess Problem.
  *
  * @author Izhari Ishak Aksa
  */
@@ -17,7 +18,7 @@ public class Problem750YES {
             int[] pos = new int[8];
             Arrays.fill(pos, -1);
             int row = sc.nextInt() - 1;
-            pos[sc.nextInt() - 1] = row;
+            //pos[sc.nextInt() - 1] = row;
             System.out.println("SOLN       COLUMN");
             System.out.println(" #      1 2 3 4 5 6 7 8\n");
             LinkedList<int[]> sol = new LinkedList<int[]>();

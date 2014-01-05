@@ -3,6 +3,7 @@ package mathematics.primenumber;
 import java.util.*;
 
 /**
+ * Count the factors.
  *
  * @author Izhari Ishak Aksa
  */
@@ -33,5 +34,4 @@ public class Problem10699YES {
             System.out.println(n + " : " + ret);
         }
     }
-
 }

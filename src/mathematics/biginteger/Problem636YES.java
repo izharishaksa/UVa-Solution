@@ -3,6 +3,7 @@ package mathematics.biginteger;
 import java.util.Scanner;
 
 /**
+ * Squares (III).
  *
  * @author Izhari Ishak Aksa
  */

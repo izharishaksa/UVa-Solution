@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
+ * LCD Display.
  *
  * @author Izhari Ishak Aksa
  */

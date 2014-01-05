@@ -3,6 +3,7 @@ package problemsolvingparadigms.dynamicprogramming;
 import java.util.Scanner;
 
 /**
+ * Maximum Sums.
  *
  * @author Izhari Ishak Aksa
  */
@@ -27,11 +28,11 @@ public class Problem108YES {
                 } else if (j == 0) {
                     sum[i][j] = mat[i][j] + sum[i - 1][j];
                 } else {
-                    sum[i][j] = mat[i][j] + sum[i][j - 1] + sum[i - 1][j] - sum[i - 1][j - 1];                    
+                    sum[i][j] = mat[i][j] + sum[i][j - 1] + sum[i - 1][j] - sum[i - 1][j - 1];
                 }
             }
         }
-        
+
         int max = 0;
         for (int i = 0; i < N; i++) {
             for (int ii = i; ii < N; ii++) {

@@ -3,6 +3,7 @@ package introduction;
 import java.util.*;
 
 /**
+ * Kindergarten Counting Game.
  *
  * @author Izhari Ishak Aksa
  */

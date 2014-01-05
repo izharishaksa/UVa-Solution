@@ -3,6 +3,7 @@ package introduction;
 import java.util.Scanner;
 
 /**
+ * Mine Sweeper.
  *
  * @author Izhari Ishak Aksa
  */

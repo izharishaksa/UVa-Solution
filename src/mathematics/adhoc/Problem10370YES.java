@@ -3,6 +3,7 @@ package mathematics.adhoc;
 import java.util.*;
 
 /**
+ * Above Average.
  *
  * @author Izhari Ishak Aksa
  */

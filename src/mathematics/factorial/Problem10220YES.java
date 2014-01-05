@@ -2,7 +2,9 @@ package mathematics.factorial;
 
 import java.math.BigInteger;
 import java.util.Scanner;
+
 /**
+ * I Love Big Numbers!
  *
  * @author Izhari Ishak Aksa
  */
@@ -24,5 +26,4 @@ public class Problem10220YES {
             System.out.println(ret);
         }
     }
-
 }

@@ -3,6 +3,7 @@ package introduction;
 import java.util.Scanner;
 
 /**
+ * Financial Management.
  *
  * @author Izhari Ishak Aksa
  */

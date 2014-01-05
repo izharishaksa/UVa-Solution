@@ -3,6 +3,7 @@ package problemsolvingparadigms.dynamicprogramming;
 import java.util.Scanner;
 
 /**
+ * Dividing Coins.
  *
  * @author Izhari Ishak Aksa
  */

@@ -4,6 +4,7 @@ import java.util.*;
 import java.math.*;
 
 /**
+ * Big Mod.
  *
  * @author Izhari Ishak Aksa
  */
@@ -18,5 +19,4 @@ public class Problem374YES {
             System.out.println(new BigInteger(a + "").modPow(new BigInteger(b + ""), new BigInteger(c + "")));
         }
     }
-
 }

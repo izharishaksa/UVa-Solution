@@ -3,6 +3,7 @@ package rare;
 import java.util.Scanner;
 
 /**
+ * DNA Sorting.
  *
  * @author Izhari Ishak Aksa
  */

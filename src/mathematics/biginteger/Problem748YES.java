@@ -4,6 +4,7 @@ import java.util.*;
 import java.math.*;
 
 /**
+ * Exponentiation.
  *
  * @author Izhari Ishak Aksa
  */
@@ -17,7 +18,9 @@ public class Problem748YES {
             int n = sc.nextInt();
             bi = bi.pow(n);
             String s = bi.stripTrailingZeros().toPlainString();
-            if (s.charAt(0) == '0') s = s.substring(1);
+            if (s.charAt(0) == '0') {
+                s = s.substring(1);
+            }
             System.out.println(s);
         }
     }

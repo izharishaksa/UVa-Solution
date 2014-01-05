@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * That is Your Queue.
  *
  * @author Izhari Ishak Aksa
  */

@@ -3,6 +3,7 @@ package mathematics.factorial;
 import java.util.*;
 
 /**
+ * Recover Factorial.
  *
  * @author Izhari Ishak Aksa
  */
@@ -25,9 +26,13 @@ public class Problem10856 {
                 if (y % x == 0) {
                     y /= x;
                     count++;
-                } else x++;
+                } else {
+                    x++;
+                }
             }
-            if (y > 1) count++;
+            if (y > 1) {
+                count++;
+            }
             map.put(prev + count, i);
             prev += count;
         }
@@ -44,5 +49,4 @@ public class Problem10856 {
             t++;
         }
     }
-
 }

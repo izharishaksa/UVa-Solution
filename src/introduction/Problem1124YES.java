@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
+ * Celebrity jeopardy.
  *
  * @author Izhari Ishak Aksa
  */

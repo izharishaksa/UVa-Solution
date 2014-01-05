@@ -3,6 +3,7 @@ package mathematics.factorial;
 import java.util.Scanner;
 
 /**
+ * Just the Facts.
  *
  * @author Izhari Ishak Aksa
  */
@@ -35,5 +36,4 @@ public class Problem568YES {
         }
         return x;
     }
-
 }

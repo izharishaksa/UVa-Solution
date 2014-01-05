@@ -4,6 +4,7 @@ import java.util.*;
 import java.math.*;
 
 /**
+ * What Base Is This?
  *
  * @author Izhari Ishak Aksa
  */
@@ -55,7 +56,9 @@ public class Problem343YES {
                         break;
                     }
                 }
-                if (bisa) break;
+                if (bisa) {
+                    break;
+                }
             }
             if (bisa) {
                 System.out.println(a + " (base " + kiri + ") = " + b + " (base " + kanan + ")");

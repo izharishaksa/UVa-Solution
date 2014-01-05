@@ -3,7 +3,6 @@ package geometry.convexhull;
 import java.util.*;
 
 /**
- * This problem is solved using Graham-Scan algorithm.
  *
  * @author Izhari Ishak Aksa
  */
@@ -14,16 +13,20 @@ public class Problem681 {
         Arrays.fill(prime, true);
         prime[0] = false;
         prime[1] = false;
-        for (int i = 0; i < 100000; i++)
-            if (prime[i])
-                for (int j = i + i; j < 100000; j += i)
+        for (int i = 0; i < 100000; i++) {
+            if (prime[i]) {
+                for (int j = i + i; j < 100000; j += i) {
                     prime[j] = false;
-        for (int i = 99999; i >= 2; i--)
+                }
+            }
+        }
+        for (int i = 99999; i >= 2; i--) {
             if (prime[i]) {
                 System.out.println(i);
                 break;
             }
-        /*Scanner sc = new Scanner(System.in);
+        }
+        Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
@@ -35,8 +38,9 @@ public class Problem681 {
             for (int i = 1; i < n; i++) {
                 a = sc.nextInt();
                 b = sc.nextInt();
-                if (point[i].y < point[ind].y || (point[i].y == point[ind].y && point[i].x > point[ind].x))
+                if (point[i].y < point[ind].y || (point[i].y == point[ind].y && point[i].x > point[ind].x)) {
                     ind = i;
+                }
             }
 
             Point temp = point[0];
@@ -57,20 +61,17 @@ public class Problem681 {
 
             ind = 1;
             while (ind < n) {
-
+                
             }
-        }*/
+        }
     }
-
 }
 
 //Compare based on it's angle w.r.t. point called pivot.
 class Point implements Comparable<Point> {
 
     public int x;
-
     public int y;
-
     private Point pivot;
 
     public Point(int x, int y) {
@@ -96,7 +97,9 @@ class Point implements Comparable<Point> {
     @Override
     public int compareTo(Point o) {
         if (area(this, o) == 0) {
-            if (dist(pivot, this) < dist(pivot, o)) return - 1;
+            if (dist(pivot, this) < dist(pivot, o)) {
+                return - 1;
+            }
             return 1;
         }
         int d1x = this.x - pivot.x;
@@ -104,8 +107,9 @@ class Point implements Comparable<Point> {
         int d2x = o.x - pivot.x;
         int d2y = o.y - pivot.y;
 
-        if (Math.atan2((double) d1y, (double) d1x) - Math.atan2((double) d2y, (double) d2x) < 0) return -1;
+        if (Math.atan2((double) d1y, (double) d1x) - Math.atan2((double) d2y, (double) d2x) < 0) {
+            return -1;
+        }
         return 1;
     }
-
 }

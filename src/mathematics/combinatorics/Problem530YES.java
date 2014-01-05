@@ -3,6 +3,7 @@ package mathematics.combinatorics;
 import java.util.*;
 
 /**
+ * Binomial Showdown.
  *
  * @author Izhari Ishak Aksa
  */
@@ -25,8 +26,9 @@ public class Problem530YES {
             }
             int start = m + 1;
             int[] arr = new int[temp];
-            for (int i = 0; i < temp; i++)
+            for (int i = 0; i < temp; i++) {
                 arr[i] = start + i;
+            }
             long res = 1;
             for (int i = 2; i <= temp; i++) {
                 int x = i;
@@ -38,7 +40,9 @@ public class Problem530YES {
                         break;
                     }
                 }
-                if (!bisa) res *= x;
+                if (!bisa) {
+                    res *= x;
+                }
             }
             for (int i = 0; i < arr.length; i++) {
                 ans *= arr[i];

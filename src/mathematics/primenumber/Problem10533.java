@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
+ * Digit Primes.
  *
  * @author Izhari Ishak Aksa
  */
@@ -54,5 +55,4 @@ public class Problem10533 {
             System.out.println(ret);
         }
     }
-
 }

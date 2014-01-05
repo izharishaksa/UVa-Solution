@@ -4,6 +4,8 @@ import java.util.*;
 import java.math.*;
 
 /**
+ * Division.
+ * 
  * Notice property:
  * if (a > b and a mod b = 0) then the result is: f(t, a, b) = t^a-b + t^a-b-b + t^a-b-b + ... + t^0
  *

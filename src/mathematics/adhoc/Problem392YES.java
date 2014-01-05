@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * Polynomial Showdown.
  *
  * @author Izhari Ishak Aksa
  */

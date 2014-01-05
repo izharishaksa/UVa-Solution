@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 /**
+ * Updating a Dictionary.
  *
  * @author Izhari Ishak Aksa
  */

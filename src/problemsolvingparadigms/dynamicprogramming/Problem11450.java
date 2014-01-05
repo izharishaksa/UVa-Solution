@@ -3,6 +3,7 @@ package problemsolvingparadigms.dynamicprogramming;
 import java.util.*;
 
 /**
+ * Wedding Shopping.
  *
  * @author Izhari Ishak Aksa
  */
@@ -14,8 +15,7 @@ public class Problem11450 {
         for (int i = 0; i < n; i++) {
             int m = sc.nextInt();
             int c = sc.nextInt();
-            
+
         }
     }
-
 }

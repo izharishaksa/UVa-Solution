@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
+ * Dungeon Master.
  *
  * @author Izhari Ishak Aksa
  */

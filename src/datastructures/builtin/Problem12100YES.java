@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Printer Queue.
  *
  * @author Izhari Ishak Aksa
  */

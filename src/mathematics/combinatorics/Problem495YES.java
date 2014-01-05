@@ -4,6 +4,7 @@ import java.util.*;
 import java.math.*;
 
 /**
+ * Fibonacci Freeze.
  *
  * @author Izhari Ishak Aksa
  */
@@ -22,5 +23,4 @@ public class Problem495YES {
             System.out.println("The Fibonacci number for " + n + " is " + fib[n]);
         }
     }
-
 }

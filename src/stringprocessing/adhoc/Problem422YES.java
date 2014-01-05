@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
+ * Word-Search Wonder.
  *
  * @author Izhari Ishak Aksa
  */

@@ -2,7 +2,9 @@ package others;
 
 import java.util.*;
 import java.io.*;
+
 /**
+ * Squares.
  *
  * @author Izhari Ishak Aksa
  */
@@ -42,7 +44,9 @@ public class Problem201YES {
                             if (!map.containsKey("H " + (k + 1 + i) + " " + (j + l + 1))) {
                                 ok = false;
                             }
-                            if (!ok) break;
+                            if (!ok) {
+                                break;
+                            }
                         }
                         if (ok) {
                             res[i]++;

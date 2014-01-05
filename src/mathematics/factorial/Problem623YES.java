@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
+ * 500!
  *
  * @author Izhari Ishak Aksa
  */
@@ -21,5 +22,4 @@ public class Problem623YES {
             System.out.println(ret);
         }
     }
-
 }

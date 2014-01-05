@@ -3,6 +3,7 @@ package mathematics.factorial;
 import java.util.*;
 
 /**
+ * Mischievous Children.
  *
  * @author Izhari Ishak Aksa
  */
@@ -10,8 +11,9 @@ public class Problem10338YES {
 
     static long fact(int n) {
         long ret = 1L;
-        for (int i = 2; i <= n; i++)
+        for (int i = 2; i <= n; i++) {
             ret *= i;
+        }
         return ret;
     }
 
@@ -26,8 +28,9 @@ public class Problem10338YES {
             long ret = fact(v);
             int diff = 1;
             for (int i = 1; i < c.length; i++) {
-                if (c[i] == c[i - 1]) diff++;
-                else {
+                if (c[i] == c[i - 1]) {
+                    diff++;
+                } else {
                     ret /= fact(diff);
                     diff = 1;
                 }
@@ -36,5 +39,4 @@ public class Problem10338YES {
             System.out.println("Data set " + t + ": " + ret);
         }
     }
-
 }

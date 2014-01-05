@@ -3,6 +3,7 @@ package mathematics.biginteger;
 import java.util.*;
 
 /**
+ * Kibbles "n" Bits "n" Bits "n" Bits "n" Bits.
  *
  * @author Izhari Ishak Aksa
  */
@@ -10,8 +11,9 @@ public class Problem446YES {
 
     static String add(String s) {
         int n = s.length();
-        for (int i = 0; i < 13 - n; i++)
+        for (int i = 0; i < 13 - n; i++) {
             s = "0" + s;
+        }
         return s;
     }
 
@@ -35,5 +37,4 @@ public class Problem446YES {
             }
         }
     }
-
 }

@@ -3,6 +3,7 @@ package mathematics.biginteger;
 import java.util.Scanner;
 
 /**
+ * Ternary.
  *
  * @author Izhari Ishak Aksa
  */

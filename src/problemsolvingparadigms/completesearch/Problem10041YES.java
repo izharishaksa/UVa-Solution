@@ -3,6 +3,7 @@ package problemsolvingparadigms.completesearch;
 import java.util.Scanner;
 
 /**
+ * Vito's Family.
  *
  * @author Izhari Ishak Aksa
  */
@@ -31,5 +32,4 @@ public class Problem10041YES {
             System.out.println(min);
         }
     }
-    
 }

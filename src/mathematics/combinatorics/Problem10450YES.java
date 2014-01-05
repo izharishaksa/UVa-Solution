@@ -3,6 +3,7 @@ package mathematics.combinatorics;
 import java.util.Scanner;
 
 /**
+ * World Cup Noise.
  *
  * @author Izhari Ishak Aksa
  */

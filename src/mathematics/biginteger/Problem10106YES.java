@@ -4,6 +4,7 @@ import java.util.*;
 import java.math.*;
 
 /**
+ * Product.
  *
  * @author Izhari Ishak Aksa
  */

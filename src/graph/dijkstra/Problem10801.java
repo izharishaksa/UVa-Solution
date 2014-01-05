@@ -3,6 +3,7 @@ package graph.dijkstra;
 import java.util.Scanner;
 
 /**
+ * Lift Hopping.
  *
  * @author Izhari Ishak Aksa
  */

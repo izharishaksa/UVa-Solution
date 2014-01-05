@@ -3,6 +3,7 @@ package datastructures.builtin;
 import java.util.Scanner;
 
 /**
+ * Jollybee Tournament.
  *
  * @author Izhari Ishak Aksa
  */

@@ -3,6 +3,7 @@ package mathematics.factorial;
 import java.util.*;
 
 /**
+ * Again Prime? No Time.
  *
  * @author Izhari Ishak Aksa
  */
@@ -24,7 +25,9 @@ public class Problem10780YES {
                         map1.put(x, 1);
                     }
                     m /= x;
-                } else x++;
+                } else {
+                    x++;
+                }
             }
             if (m > 1) {
                 map1.put(m, 1);

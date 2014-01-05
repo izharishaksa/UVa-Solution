@@ -3,6 +3,7 @@ package mathematics.numbertheory;
 import java.util.Scanner;
 
 /**
+ * Factoring Large Numbers.
  *
  * @author Izhari Ishak Aksa
  */

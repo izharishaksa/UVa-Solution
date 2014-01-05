@@ -3,6 +3,7 @@ package graph.traversal;
 import java.util.Scanner;
 
 /**
+ * Robot Motions.
  *
  * @author Izhari Ishak Aksa
  */

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
+ * Average Speed.
  *
  * @author Izhari Ishak Aksa
  */
