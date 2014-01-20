@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayDeque;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
@@ -25,7 +25,7 @@ public class Problem11995YES {
         while ((s = br.readLine()) != null) {
             int n = Integer.parseInt(s);
             boolean isQ = true, isS = true, isPQ = true;
-            Queue<Integer> qq = new LinkedList<Integer>();
+            Queue<Integer> qq = new ArrayDeque<Integer>();
             Stack<Integer> st = new Stack<Integer>();
             PriorityQueue<Integer> pq = new PriorityQueue<Integer>(n, new Comparator<Integer>() {
                 public int compare(Integer o1, Integer o2) {

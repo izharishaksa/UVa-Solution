@@ -1,7 +1,8 @@
 package problemsolvingparadigms.completesearch;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ public class Problem11085YES {
     public static void main(String[] args) {
         int[] pos = new int[8];
         Arrays.fill(pos, -1);
-        LinkedList<int[]> sol = new LinkedList<int[]>();
+        Queue<int[]> sol = new ArrayDeque<int[]>();
         sol.add(pos);
         int ret = 1;
         int[][] solution = new int[92][8];
@@ -58,7 +59,6 @@ public class Problem11085YES {
                 }
             }
         }
-
         Scanner sc = new Scanner(System.in);
         int cases = 1;
         while (sc.hasNext()) {

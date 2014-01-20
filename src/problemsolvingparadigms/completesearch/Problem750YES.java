@@ -1,7 +1,8 @@
 package problemsolvingparadigms.completesearch;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /**
@@ -18,11 +19,12 @@ public class Problem750YES {
             int[] pos = new int[8];
             Arrays.fill(pos, -1);
             int row = sc.nextInt() - 1;
-            //pos[sc.nextInt() - 1] = row;
+            int col = sc.nextInt() - 1;
+            pos[col] = row;
             System.out.println("SOLN       COLUMN");
             System.out.println(" #      1 2 3 4 5 6 7 8\n");
-            LinkedList<int[]> sol = new LinkedList<int[]>();
-            sol.add(pos);
+            Queue<int[]> sol = new ArrayDeque<int[]>();
+            sol.offer(pos);
             int ret = 1;
             while (!sol.isEmpty()) {
                 int[] cur = sol.poll();
@@ -60,7 +62,7 @@ public class Problem750YES {
                                 if (bisa) {
                                     int[] temp = cur.clone();
                                     temp[i] = j;
-                                    sol.add(temp);
+                                    sol.offer(temp);
                                 }
                             }
                             break;

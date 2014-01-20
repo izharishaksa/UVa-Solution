@@ -2,9 +2,12 @@ package datastructures.builtin;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import java.util.Scanner;
 
 /**
@@ -19,15 +22,15 @@ public class Problem417YES {
         Scanner sc = new Scanner(System.in);
         HashMap<String, Integer> temp = new HashMap<String, Integer>();
         int ind = 1;
-        ArrayList<String> dp = new ArrayList<String>();
+        List<String> dp = new ArrayList<String>();
         for (int i = 1; i <= 5; i++) {
-            LinkedList<String> cur = new LinkedList<String>();
+            Queue<String> cur = new ArrayDeque<String>();
             for (int j = 0; j < dp.size(); j++) {
                 cur.add(dp.get(j));
             }
             dp = new ArrayList<String>();
-            if (cur.size() == 0) {
-                cur.add("");
+            if (cur.isEmpty()) {
+                cur.offer("");
             }
             while (!cur.isEmpty()) {
                 String a = cur.poll();
@@ -43,7 +46,6 @@ public class Problem417YES {
                         } else {
                             cur.add(j + "");
                         }
-
                     }
                 }
             }

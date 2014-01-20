@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem1062 {
+public class Problem1062YES {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,7 +30,12 @@ public class Problem1062 {
                     }
                 }
                 if (!bisa) {
-                    arr[s.charAt(i) - 'A'] = s.charAt(i) + arr[s.charAt(i) - 'A'];
+                    for (int j = 0; j < 26; j++) {
+                        if (arr[j].equals("")) {
+                            arr[j] = s.charAt(i) + arr[j];
+                            break;
+                        }
+                    }
                 }
             }
             int ret = 0;
