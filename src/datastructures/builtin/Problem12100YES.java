@@ -1,6 +1,7 @@
 package datastructures.builtin;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,7 +16,7 @@ public class Problem12100YES {
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
             int m = sc.nextInt(), pos = sc.nextInt();
-            ArrayList<Integer> vi = new ArrayList<Integer>();
+            List<Integer> vi = new ArrayList<Integer>();
             for (int j = 0; j < m; j++) {
                 vi.add(sc.nextInt());
             }

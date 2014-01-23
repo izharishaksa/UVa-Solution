@@ -2,6 +2,7 @@ package datastructures.builtin;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 /**
@@ -13,14 +14,19 @@ public class Problem11988YES {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
         String s;
+        boolean home;
+        char[] c;
+        StringBuilder cur;
+        LinkedList<StringBuilder> list;
         while ((s = br.readLine()) != null) {
-            boolean home = false;
-            StringBuilder cur = new StringBuilder();
-            LinkedList<StringBuilder> list = new LinkedList<StringBuilder>();
+            home = false;
+            cur = new StringBuilder();
+            list = new LinkedList<StringBuilder>();
+            c = s.toCharArray();
             for (int i = 0; i < s.length(); i++) {
-                char c = s.charAt(i);
-                if (c == '[') {
+                if (c[i] == '[') {
                     if (home) {
                         list.addFirst(cur);
                     } else {
@@ -28,7 +34,7 @@ public class Problem11988YES {
                     }
                     cur = new StringBuilder();
                     home = true;
-                } else if (c == ']') {
+                } else if (c[i] == ']') {
                     if (home) {
                         list.addFirst(cur);
                     } else {
@@ -37,7 +43,7 @@ public class Problem11988YES {
                     cur = new StringBuilder();
                     home = false;
                 } else {
-                    cur.append(c);
+                    cur.append(c[i]);
                 }
             }
             if (home) {
@@ -49,7 +55,9 @@ public class Problem11988YES {
             for (StringBuilder sb : list) {
                 res.append(sb);
             }
-            System.out.println(res);
+            pw.println(res);
+            pw.flush();
         }
+        pw.close();
     }
 }

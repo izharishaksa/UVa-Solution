@@ -1,7 +1,8 @@
 package datastructures.builtin;
 
-import java.util.*;
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
 
 /**
  * Contest Scoreboard.

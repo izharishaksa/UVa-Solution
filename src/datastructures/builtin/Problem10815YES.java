@@ -19,10 +19,10 @@ public class Problem10815YES {
         TreeSet<String> set = new TreeSet<String>();
         while ((line = br.readLine()) != null) {
             StringBuilder sb = new StringBuilder();
+            char[] c = line.toCharArray();
             for (int i = 0; i < line.length(); i++) {
-                char c = line.charAt(i);
-                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-                    sb.append(c);
+                if ((c[i] >= 'a' && c[i] <= 'z') || (c[i] >= 'A' && c[i] <= 'Z')) {
+                    sb.append(c[i]);
                 } else if (sb.length() > 0) {
                     set.add(sb.toString().toLowerCase());
                     sb = new StringBuilder();

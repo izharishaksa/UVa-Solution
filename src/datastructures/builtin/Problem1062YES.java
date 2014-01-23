@@ -1,7 +1,9 @@
 package datastructures.builtin;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * Containers.
@@ -10,29 +12,31 @@ import java.util.Scanner;
  */
 public class Problem1062YES {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
         int T = 1;
-        while (sc.hasNext()) {
-            String s = sc.nextLine();
-            if (s.equals("end")) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            if (line.equals("end")) {
                 break;
             }
             String[] arr = new String[26];
             Arrays.fill(arr, "");
-            for (int i = 0; i < s.length(); i++) {
+            int len = line.length();
+            for (int i = 0; i < len; i++) {
                 boolean bisa = false;
                 for (int j = 0; j < 26; j++) {
-                    if (!arr[j].equals("") && arr[j].charAt(0) >= s.charAt(i)) {
+                    if (!arr[j].equals("") && arr[j].charAt(0) >= line.charAt(i)) {
                         bisa = true;
-                        arr[j] = s.charAt(i) + arr[j];
+                        arr[j] = line.charAt(i) + arr[j];
                         break;
                     }
                 }
                 if (!bisa) {
                     for (int j = 0; j < 26; j++) {
                         if (arr[j].equals("")) {
-                            arr[j] = s.charAt(i) + arr[j];
+                            arr[j] = line.charAt(i) + arr[j];
                             break;
                         }
                     }
@@ -44,7 +48,9 @@ public class Problem1062YES {
                     ret++;
                 }
             }
-            System.out.println("Case " + (T++) + ": " + ret);
+            pw.println("Case " + (T++) + ": " + ret);
+            pw.flush();
         }
+        pw.close();
     }
 }
