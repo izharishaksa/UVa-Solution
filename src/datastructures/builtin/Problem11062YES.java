@@ -10,7 +10,7 @@ import java.util.TreeSet;
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem11062 {
+public class Problem11062YES {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -4,99 +4,85 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Arrays;
-import java.util.HashMap;
 
 /**
  * Waking up brain.
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem10507 {
+public class Problem10507YES {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
         String line;
         while ((line = br.readLine()) != null) {
-            int N = Integer.parseInt(line.trim());
+            int N = Integer.parseInt(line.trim()) - 3;
             int M = Integer.parseInt(br.readLine().trim());
             String wakeUp = br.readLine();
-            DisjointSets ds = new DisjointSets();
-            boolean[] active = new boolean[26];
-            ds.makeSet(wakeUp.charAt(0) - 'A');
-            active[wakeUp.charAt(0) - 'A'] = true;
-            ds.makeSet(wakeUp.charAt(1) - 'A');
-            active[wakeUp.charAt(1) - 'A'] = true;
-            ds.makeSet(wakeUp.charAt(2) - 'A');
-            active[wakeUp.charAt(2) - 'A'] = true;
-            ds.union(wakeUp.charAt(0) - 'A', wakeUp.charAt(1) - 'A');
-            ds.union(wakeUp.charAt(2) - 'A', wakeUp.charAt(1) - 'A');
-            boolean[][] con = new boolean[26][26];
-            for (int i = 0; i < N; i++) {
+            DisjointSet ds = new DisjointSet();
+            for (int i = 0; i < 26; i++) {
                 ds.makeSet(i);
             }
+            boolean[][] con = new boolean[26][26];
             for (int i = 0; i < M; i++) {
                 line = br.readLine();
                 int x = line.charAt(0) - 'A';
                 int y = line.charAt(1) - 'A';
                 con[x][y] = true;
                 con[y][x] = true;
-                ds.makeSet(x);
-                ds.makeSet(y);
             }
+            ds.union(wakeUp.charAt(0) - 'A', wakeUp.charAt(1) - 'A');
+            ds.union(wakeUp.charAt(1) - 'A', wakeUp.charAt(2) - 'A');
+            int parent = ds.find(wakeUp.charAt(0) - 'A');
+
             int years = 0;
             boolean changed = true;
             while (changed) {
                 changed = false;
+                boolean[] wakeIt = new boolean[26];
                 for (int i = 0; i < 26; i++) {
-                    if (ds.parent[i] == -1) {
+                    if (ds.find(i) == parent) {
                         continue;
                     }
-                    boolean[] newActive = new boolean[26];
+                    int count = 0;
                     for (int j = 0; j < 26; j++) {
-                        if (active[j] && con[i][j] && ds.parent[j] != -1 && ds.isDisjoint(i, j)) {
-                            ds.union(i, j);
-                            newActive[i] = true;
-                            changed = true;
-                            years++;
-                            System.err.println(((char) ('A' + i)) + " " + ((char) ('A' + j)));
+                        if (con[i][j] && ds.find(j) == parent) {
+                            count++;
                         }
                     }
-                    if (changed) {
-                        for (int j = 0; j < 26; j++) {
-                            if (newActive[j]) {
-                                active[j] = true;
-                            }
-                        }
+                    if (count > 2) {
+                        changed = true;
+                        wakeIt[i] = true;
+                        N--;
                     }
                 }
-                System.err.println("-----");
+                for (int i = 0; i < 26; i++) {
+                    if (wakeIt[i]) {
+                        ds.union(i, wakeUp.charAt(0) - 'A');
+                    }
+                }
+                if (changed) {
+                    years++;
+                }
             }
 
-            HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-            if (M > 0) {
-                for (int i = 0; i < 26; i++) {
-                    if (ds.parent[i] != -1) {
-                        map.put(ds.parent[i], 1);
-                    }
-                }
-            }
-            if (map.size() == 1 || N < 4) {
+            if (N <= 0) {
                 pw.println("WAKE UP IN, " + years + ", YEARS");
             } else {
                 pw.println("THIS BRAIN NEVER WAKES UP");
             }
             pw.flush();
-            //br.readLine();
+            br.readLine();
         }
         pw.close();
     }
 
-    static class DisjointSets {
+    static class DisjointSet {
 
         int[] parent, rank;
 
-        public DisjointSets() {
+        public DisjointSet() {
             parent = new int[26];
             Arrays.fill(parent, -1);
             rank = new int[26];
@@ -110,10 +96,8 @@ public class Problem10507 {
         }
 
         void makeSet(int x) {
-            if (parent[x] == -1) {
-                parent[x] = x;
-                rank[x] = 0;
-            }
+            parent[x] = x;
+            rank[x] = 0;
         }
 
         boolean union(int x, int y) {
