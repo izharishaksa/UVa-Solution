@@ -3,11 +3,12 @@ package datastructures.builtin;
 import java.util.Scanner;
 
 /**
+ * Unique Factorization.
  *
  * @author Izhari Ishak Aksa
  */
 public class Problem10858 {
-    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
@@ -15,8 +16,7 @@ public class Problem10858 {
             if (n == 0) {
                 break;
             }
-            
+
         }
     }
-    
 }

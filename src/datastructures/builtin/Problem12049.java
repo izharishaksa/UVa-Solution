@@ -3,7 +3,6 @@ package datastructures.builtin;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Arrays;
 
 /**
  * Just Prune the List.
@@ -41,36 +40,20 @@ public class Problem12049 {
         br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
         int TC = readInt();
-        for (int T = 0; T < TC; T++) {
+        while (TC-- > 0) {
             int A = readInt();
             int B = readInt();
-            int[] arrA = new int[A];
             for (int i = 0; i < A; i++) {
                 int x = readInt();
-                arrA[i] = x;
             }
-            Arrays.sort(arrA);
-            int[] arrB = new int[B];
             for (int i = 0; i < B; i++) {
                 int x = readInt();
-                arrB[i] = x;
             }
-            Arrays.sort(arrB);
-            int indA = 0, indB = 0, same = 0;
-            while (indA < A && indB < B) {
-                if (arrA[indA] == arrB[indB]) {
-                    same++;
-                    indA++;
-                    indB++;
-                } else if (arrA[indA] > arrB[indB]) {
-                    indB++;
-                } else {
-                    indA++;
-                }
-            }
-            pw.println(A + B - (2 * same));
+
+            int total = 0;
+            pw.println(total);
+            pw.flush();
         }
-        pw.flush();
         pw.close();
         br.close();
     }
