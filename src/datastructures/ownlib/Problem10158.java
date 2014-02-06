@@ -3,6 +3,8 @@ package datastructures.ownlib;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * War.
@@ -44,9 +46,7 @@ public class Problem10158 {
         for (int i = 0; i < N; i++) {
             ds.makeSet(i);
         }
-        boolean[] set = new boolean[N];
         while (true) {
-            pw.flush();
             int c = readInt();
             int x = readInt();
             int y = readInt();
@@ -54,71 +54,32 @@ public class Problem10158 {
                 break;
             }
             if (c == 1) {
-                if (!set[x] || !set[y]) {
+                if (!ds.isEnemy(x, y)) {
                     ds.union(x, y);
-                    set[x] = true;
-                    set[y] = true;
                 } else {
-                    int px = ds.find(x);
-                    int py = ds.find(y);
-                    if (px != py) {
-                        pw.println(-1);
-                    }
+                    pw.println(-1);
                 }
             } else if (c == 2) {
-                if (x == y) {
-                    pw.println(0);
-                    continue;
-                }
-                if (!set[x] || !set[y]) {
-                    if (!set[x]) {
-                        ds.union(x, x);
-                        set[x] = true;
-                    }
-                    if (!set[y]) {
-                        ds.union(y, y);
-                        set[y] = true;
-                    }
-                } else {
-                    int px = ds.find(x);
-                    int py = ds.find(y);
-                    if (px == py) {
-                        pw.println(-1);
-                    }
+                boolean res = ds.setEnemy(x, y);
+                if (!res) {
+                    pw.println(-1);
                 }
             } else if (c == 3) {
-                if (x == y) {
+                int px = ds.find(x);
+                int py = ds.find(y);
+                if (px == py) {
                     pw.println(1);
-                    continue;
-                }
-                if (set[x] && set[y]) {
-                    int px = ds.find(x);
-                    int py = ds.find(y);
-                    if (px == py) {
-                        pw.println(1);
-                    } else {
-                        pw.println(0);
-                    }
                 } else {
                     pw.println(0);
                 }
             } else if (c == 4) {
-                if (x == y) {
-                    pw.println(0);
-                    continue;
-                }
-                if (set[x] && set[y]) {
-                    int px = ds.find(x);
-                    int py = ds.find(y);
-                    if (px != py) {
-                        pw.println(1);
-                    } else {
-                        pw.println(0);
-                    }
+                if (ds.isEnemy(x, y)) {
+                    pw.println(1);
                 } else {
                     pw.println(0);
                 }
             }
+            pw.flush();
         }
         pw.close();
         br.close();
@@ -127,15 +88,18 @@ public class Problem10158 {
     static class DisjoinSet {
 
         int[] parent, rank;
+        Set<Integer>[] enemy;
 
         public DisjoinSet(int N) {
             parent = new int[N];
             rank = new int[N];
+            enemy = new HashSet[N];
         }
 
         public void makeSet(int x) {
             parent[x] = x;
             rank[x] = 1;
+            enemy[x] = new HashSet<Integer>();
         }
 
         public int find(int x) {
@@ -145,18 +109,51 @@ public class Problem10158 {
             return parent[x];
         }
 
-        // public int find
         public void union(int x, int y) {
             int px = find(x);
             int py = find(y);
-            if (rank[px] > rank[py]) {
-                parent[py] = px;
-            } else {
-                parent[px] = py;
+            if (px != py) {
+                if (rank[px] >= rank[py]) {
+                    parent[py] = px;
+                    for (int i : enemy[py]) {
+                        enemy[px].add(i);
+                    }
+                } else {
+                    parent[px] = py;
+                    for (int i : enemy[px]) {
+                        enemy[py].add(i);
+                    }
+                }
+                if (rank[px] == rank[py]) {
+                    rank[px]++;
+                }
             }
-            if (rank[px] == rank[py]) {
-                rank[px]++;
+        }
+
+        public boolean isEnemy(int x, int y) {
+            int px = find(x);
+            int py = find(y);
+            if (enemy[px].contains(py)) {
+                return true;
             }
+            return false;
+        }
+
+        public boolean setEnemy(int x, int y) {
+            int px = find(x);
+            int py = find(y);
+            if (px == py) {
+                return false;
+            }
+            enemy[px].add(py);
+            enemy[py].add(px);
+            for (int i : enemy[px]) {
+                union(py, i);
+            }
+            for (int i : enemy[py]) {
+                union(px, i);
+            }
+            return true;
         }
     }
 }

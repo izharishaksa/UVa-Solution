@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Is Bigger Smarter?
- * 
+ *
  * This problem is solved using DP (longest decreasing sequence).
  *
  * @author Izhari Ishak Aksa

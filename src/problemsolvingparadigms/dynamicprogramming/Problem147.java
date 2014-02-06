@@ -9,34 +9,23 @@ import java.util.*;
  */
 public class Problem147 {
 
+    static int[] res;
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double n;
+        int[] arr = new int[]{5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000};
+        res = new int[30001];
+        res[5] = 1;
+        for (int i = 10; i <= 30000; i += 5) {
+            
+        }
+        int n;
         while (sc.hasNext()) {
-            n = Double.parseDouble(sc.next());
-            n *= 100;
+            n = (int) (Double.parseDouble(sc.next()) * 100);
             if (n == 0) {
                 break;
             }
-            int[] arr = new int[]{5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000};
-            int[] dp = new int[30001];
-            Arrays.fill(dp, 0);
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] <= n) {
-                    dp[arr[i]]++;
-                }
-            }
-            for (int i = 0; i < arr.length; i++) {
-                for (int j = arr[i]; j <= 30000; j += arr[i]) {
-                    //System.out.println(j + " " + arr[i]);
-                    dp[j]++;
-                }
-            }
-            int z = (int) n;
-            for (int i = 0; i <= z; i++) {
-                System.out.println(i + " >> " + dp[i]);
-            }
-            System.out.println(dp[(int) n]);
+            System.out.println(res[n]);
         }
     }
 }
