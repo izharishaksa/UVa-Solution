@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-
 /**
  * Freckles.
  *
@@ -74,6 +73,7 @@ public class Problem10034YES {
         }
     }
 }
+
 class Point {
 
     double x, y;

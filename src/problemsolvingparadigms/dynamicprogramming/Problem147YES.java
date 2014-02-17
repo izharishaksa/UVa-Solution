@@ -7,25 +7,36 @@ import java.util.*;
  *
  * @author Izhari Ishak Aksa
  */
-public class Problem147 {
+public class Problem147YES {
 
-    static int[] res;
-    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[]{5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000};
-        res = new int[30001];
-        res[5] = 1;
-        for (int i = 10; i <= 30000; i += 5) {
-            
+        int[] arr = new int[]{0, 1, 2, 4, 10, 20, 40, 100, 200, 400, 1000, 2000};
+        long[][] res = new long[12][6001];
+        for (int i = 0; i < 12; i++) {
+            res[i][0] = 1;
+        }
+        for (int i = 1; i < 6001; i++) {
+            res[1][i] = 1;
+        }
+
+        for (int i = 2; i < 12; i++) {
+            for (int j = 1; j < 6001; j++) {
+                if (j >= arr[i]) {
+                    res[i][j] = res[i - 1][j] + res[i][j - arr[i]];
+                } else {
+                    res[i][j] = res[i - 1][j];
+                }
+            }
         }
         int n;
         while (sc.hasNext()) {
-            n = (int) (Double.parseDouble(sc.next()) * 100);
+            double real = Double.parseDouble(sc.nextLine());
+            n = (int) (real * 20);
             if (n == 0) {
                 break;
             }
-            System.out.println(res[n]);
+            System.out.printf("%6.2f%17d\n", real, res[11][n]);
         }
     }
 }
