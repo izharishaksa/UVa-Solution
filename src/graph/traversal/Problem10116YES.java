@@ -33,14 +33,19 @@ public class Problem10116YES {
             visited[x][y] = true;
             step[x][y] = 1;
             while (true) {
-                if (map[x][y] == 'W') {
-                    y--;
-                } else if (map[x][y] == 'E') {
-                    y++;
-                } else if (map[x][y] == 'N') {
-                    x--;
-                } else {
-                    x++;
+                switch (map[x][y]) {
+                    case 'W':
+                        y--;
+                        break;
+                    case 'E':
+                        y++;
+                        break;
+                    case 'N':
+                        x--;
+                        break;
+                    default:
+                        x++;
+                        break;
                 }
                 if (x < 0 || x >= row || y < 0 || y >= col) {
                     System.out.println(cur + " step(s) to exit");
