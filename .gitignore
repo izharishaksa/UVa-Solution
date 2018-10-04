@@ -1,7 +1,7 @@
 #################
 ## Netbeans
 #################
-nbproject
+nbproject/
 .nbproject
 .nbproject/*
 nbproject/*
