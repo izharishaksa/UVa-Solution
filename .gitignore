@@ -2,13 +2,16 @@
 ## Netbeans
 #################
 nbproject
+.nbproject
+.nbproject/*
+nbproject/*
 nbproject/private/
 build/
 nbbuild/
 dist/
 nbdist/
-.nb-gradle/
-manifest.mf
+nbactions.xml
+nb-configuration.xml
 
 #################
 ## Eclipse
