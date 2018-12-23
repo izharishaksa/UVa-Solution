@@ -26,4 +26,8 @@ public class Problem260 {
 
     }
 
+    private static int test() {
+        return 0;
+    }
+
 }
