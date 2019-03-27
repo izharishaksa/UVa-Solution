@@ -1,13 +1,17 @@
 package datastructures.builtin;
 
 import java.io.*;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.util.PriorityQueue;
+import java.util.Scanner;
 
 /**
  * Sort! Sort!! and Sort!!!
- * 
+ * <p>
+ * Given N integer numbers, sort them based on their modulo value against M.
+ * <p>
+ * Create a class that implements comparison interface, sort it by their modulo value. Then store them in <code>PriorityQueue</code>.
+ * Use fastest input output method to make sure it passed the time limit.
+ *
  * @author Izhari Ishak Aksa
  */
 public class Problem11321YES {
@@ -40,6 +44,9 @@ public class Problem11321YES {
     }
 }
 
+/**
+ * Number class that implements <code>Comparable</code> for sorting purpose.
+ */
 class Number implements Comparable<Number> {
 
     public int n;
