@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Printer Queue.
+ * Problem Printer Queue.
+ * <p>
+ * Given your printing position in a set of printing queue along with each priority, output when is your printing job will be finished.
+ * <p>
+ * We could just simulate the printing queue based on their position and priority, break the simulation when your printing job is done.
  *
  * @author Izhari Ishak Aksa
  */
