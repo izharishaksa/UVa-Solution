@@ -2,14 +2,17 @@ package datastructures.builtin;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
- * 755 - 487--3279
+ * Problem 755 - 487--3279
+ * <p>
+ * Given list of phone numbers in two forms (numbers and characters), each character mapped to a number. The problem ask
+ * to output list of phone numbers in normal form (numbers) along with number of appearance, that appears more than once in the list.
+ * <p>
+ * The main problem is list of phone numbers could be up to 100k. We should use fastest input output method that available
+ * in each programming language of our choice. For Java we could use <code>BufferedReader</code> and for C/C++ we could use
+ * <code>scanf</code>.
  *
  * @author Izhari Ishak Aksa
  */
@@ -55,7 +58,7 @@ public class Problem755YES {
             } else {
                 Set<String> set = map.keySet();
                 Map<String, Integer> sMap = new TreeMap<String, Integer>();
-                for (Iterator<String> it = set.iterator(); it.hasNext();) {
+                for (Iterator<String> it = set.iterator(); it.hasNext(); ) {
                     String i = it.next();
                     int x = map.get(i);
                     if (x > 1) {
